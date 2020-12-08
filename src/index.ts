@@ -42,6 +42,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson): DataProvider => ({
             page: page,
             orderBy: field,
             sortedBy: order,
+            search: params.filter.q ? params.filter.q : ""
         };
         const url = `${apiUrl}/${resource}?${stringify(query)}`;
 
